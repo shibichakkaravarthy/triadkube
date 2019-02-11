@@ -193,10 +193,8 @@ body{
 .container .card-container {
 	display: flex;
 	flex-wrap: wrap;
-	position: absolute;
-	left:425px;
-	margin-top: auto;
-	margin-bottom: auto;
+	position: relative;
+	margin: auto;
 
 }
 
@@ -367,4 +365,72 @@ body{
 	bottom: 10px;
 	height: 100px;
 	width: 100px;
+}
+
+.ping{
+	background: #fff;
+	display: block;
+	padding: 25px; 
+	background: linear-gradient(to bottom, #6e529d 0%,#d97b93 100%);
+}
+
+.ping p{
+	text-align: center;
+}
+
+.ping p:after {
+	display: block;
+	content: '';
+	border-top: 1px solid #fff;
+	width: 100%;
+	transform: scaleX(0.75);
+}
+.ping #introtext {
+	color: #fff;
+	font-size: 2em;
+}
+
+.ping form {
+	display: block;
+	margin: 5px auto;
+	width: 70%;
+	position: relative;
+}
+
+.ping form label {
+	color: #fff;
+}
+
+.ping form input {
+	border: none;
+	outline: none;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 5px;
+	height: 25px;
+	margin: 10px;
+	margin-top: 2px;
+	transition: all 1s ease-in-out;
+}
+
+.ping form #name:hover  .ping form #tname{
+	opacity: 1;
+}
+
+.ping form .tooltip {
+  visibility: visible;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 6px;
+  position: relative;
+  z-index: 1;
+  margin-left: 10px;
+  height: 15px;
+}
+
+.ping form #tname, .ping form #temail, .ping form #tmobile {
+	opacity: 0;
 }
