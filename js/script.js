@@ -56,8 +56,8 @@ const services = () => {
 		seo.style.opacity = "1";
 		web.style.border = "1px solid #fff";
 		app.style.opacity = "1";
-		app.style.transitionDelay = "1s";
-		seo.style.transitionDelay = "1s";
+		app.style.transitionDelay = "0.5s";
+		seo.style.transitionDelay = "0.5s";
 		web.style.boxShadow = "none";
 	})
 
@@ -82,8 +82,8 @@ const services = () => {
 		scon.style.opacity = "0";
 		web.style.opacity = "1";
 		app.style.opacity = "1";
-		app.style.transitionDelay = "1s";
-		web.style.transitionDelay = "1s";
+		app.style.transitionDelay = "0.5s";
+		web.style.transitionDelay = "0.5s";
 		seo.style.border = "1px solid #fff";
 		seo.style.boxShadow = "none";
 	})
@@ -111,8 +111,8 @@ const services = () => {
 		app.style.boxShadow = "none";
 		app.style.border = "1px solid #fff";
 		seo.style.opacity = "1";
-		seo.style.transitionDelay = "1s";
-		web.style.transitionDelay = "1s";
+		seo.style.transitionDelay = "0.5s";
+		web.style.transitionDelay = "0.5s";
 	})
 }
 
