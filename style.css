@@ -116,9 +116,27 @@ body{
 	height: inherit;
 }
 
+@keyframes bannertext {
+	0%{
+		transform: scaleX(0);
+	}
+
+	12.5%{
+		transform: scaleX(1);
+	}
+
+	87.5%{
+		transform: scaleX(1);
+	}
+
+	100%{
+		transform: scaleX(0);
+	}
+}
+
 .banner .text {
 	display: inline-block;
-	width: auto;
+	width: 420px;
 	position: absolute;
 	padding: 10px;
 	border-left: 1px solid #fff;
@@ -127,10 +145,16 @@ body{
 	z-index: 2;
 	top: 40%;
 	right: 100px;
+	transform-origin: right;
+	animation-name: bannertext;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-delay: 4s;
 }
 
 .container{
 	position: relative;
+	width: 100vw;
 	display: flex;
 	flex-wrap: wrap;
 	margin: 10px;
@@ -144,6 +168,7 @@ body{
 
 .container #webbg {
 	position: absolute;
+	width: inherit;
 	top: 0;
 	left: 0;
 	opacity: 0;
@@ -152,6 +177,7 @@ body{
 
 .container #seobg {
 	position: absolute;
+	width: inherit;
 	top: 0;
 	left: 0;
 	opacity: 0;
@@ -160,10 +186,17 @@ body{
 
 .container #mobbg {
 	position: absolute;
+	width: inherit;
 	top: 0;
 	left: 0;
 	opacity: 0;
 	transition: 1s opacity ease-in-out, 0.16s transform linear;
+}
+
+#dataimge{
+	position: relative;
+	width: 100%;
+	height: auto;
 }
 
 .container .card-container {

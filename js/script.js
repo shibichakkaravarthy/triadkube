@@ -118,3 +118,26 @@ const services = () => {
 
 
 services();
+
+const bannerText = () => {
+	text = document.getElementsByClassName('text')[0];
+
+	textArray = ["Welcome to TriadKube where Expectation meets Reality", 
+				 "Enroll your Business into the Internet for a Comparatively Low Cost!!!",
+				 "Projects with international Standard for Indian Budget"
+				];
+
+	var i=0;
+
+	setInterval(()=> {
+		var a=document.createTextNode(textArray[i])
+		text.innerHTML = textArray[i];
+		i = i+1;
+		if(i === textArray.length){
+			i=0;
+		}
+		
+	}, 4000)
+}
+
+bannerText();
