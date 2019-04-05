@@ -3,6 +3,7 @@
 <head>
 	<title>Creative Web and Mobile App Developers :-: TraidKube</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 <body>	
 
@@ -75,24 +76,61 @@
 	</div>
 
 	<div class="ping">
-		<p id='introtext'>Have a Project in Mind... Don't hesitate to Tell us!</p>
-		<form method="POST">
-			<label>
-				Name <br>
-				<input type="text" name="name" id="name" placeholder="Name">
-			</label><br>
-			
-			<label>
-				Email <br>
-				<input type="email" name="email" placeholder="E-mail"><br>
-			</label>
-			
-			<label>
-				Phone <br>
-				<input type="tel" name="mobile" id="mobile" placeholder="Mobile"><br>
-			</label>
-			
-		</form>
+		<div class="title">Bla Bla Bla</div>
+		<div id="slide"></div>
+		<p id='error'>Please fill this field correctly to Continue. We will not Misuse or Spam you with these details</p>
+		<div class="input-content">
+			<div class="forminput">
+				<label>
+					<input type="text" class="input-field" id="name" placeholder="Name" autocomplete="off">
+					<span class="underline"></span>
+				</label>
+			</div>
+
+			<div class="forminput">
+				<label>
+					<input type="email" class="input-field" id="email" placeholder="E-mail" autocomplete="off">
+					<span class="underline"></span>
+				</label>
+			</div>
+
+			<div class="forminput">
+				<label>
+					<input type="number" class="input-field" id="mobile" placeholder="Mobile" autocomplete="off">
+					<span class="underline"></span>
+				</label>
+			</div>
+
+			<div class="forminput">
+				<div style="display: inline-grid;">
+					<h2>Interested</h2><br><br>
+
+					<label>
+						<input type="number" class="input-field" id="company" placeholder="Company" autocomplete="off">
+						<span class="underline"></span>
+					</label>
+
+					<div style="display: flex; width: 100%">
+						<div class="interested" id="web">Web<img src="https://img.icons8.com/ios/50/000000/code.png"></div>
+						<div class="interested" id="mobileselect">Mobile</div>
+						<div class="interested" id="seoselect">SEO</div>
+						<div class="interested" id="uiux">UI/UX</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="forminput">
+				<div style="display: inline-grid;">
+					<div style="display: flex; width: 100%">
+						<input type="text" name="name">
+						<input type="email" name="email">
+						<input type="number" name="mobile">
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="continue-button">Press Enter or Click &nbsp;&nbsp;&nbsp;&nbsp;<button class="continue">Continue</button></div>
 	</div>
 
 	<div class="footer">
@@ -102,7 +140,7 @@
 		<div class="right"></div>
 	</div>
 
-
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r68/three.min.js'></script>
 	<script type="text/javascript" src="node_modules/granim/dist/granim.min.js"></script>
 	<script type="text/javascript" src="js/gradient.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>

@@ -141,3 +141,151 @@ const bannerText = () => {
 }
 
 bannerText();
+
+const fsform = () => {
+	let name,email,phone,interested,nameValue,emailValue,phoneValue,interestedValue,actionButton,submitButton,i=0,container;
+	let field = document.getElementsByClassName('input-field');
+	let error = document.getElementById('error');
+
+	let rweb,rmobile,rseo,ruiux;
+	let web = document.getElementById('web');
+	let mobile = document.getElementById('mobileselect');
+	let seo = document.getElementById('seoselect');
+	let uiux = document.getElementById('uiux');
+	console.log(web,mobile,seo,uiux);
+
+	name=document.getElementById('name');
+	email=document.getElementById('email');
+	phone=document.getElementById('mobile');
+	interested=document.getElementById('interested');
+	actionButton=document.getElementsByClassName('continue')[0];
+	container=document.getElementsByClassName('forminput')
+	console.log(name,email,phone,interested,actionButton,container,field);
+
+	const hider = () => {
+		for(var n=0; n<container.length; n++) {
+			container[n].style.height = "0px";
+		}
+	}
+
+	hider();
+
+	let slidenumber = document.querySelector('#slide');
+	slidenumber.innerHTML=`${i+1}/5`
+
+	container[i].style.height="100%";
+
+	const viewer = () => {
+		console.log(i)
+		if(i !== 3) {
+			if(field[i].value.length === 0) {
+				error.style.transform = "scaleY(1)";
+				error.style.opacity = "1";
+			}
+
+			else{
+				hider();
+				error.style.transform = "scaleY(0)";
+				error.style.opacity = "0";
+				i=i+1;
+				slidenumber.innerHTML=`${i+1}/5`;
+				container[i].style.height="100%";
+				field[i].focus();
+			}
+		}
+
+		else {
+			i=i+1;
+			slidenumber.innerHTML=`${i+1}/5`;
+			container[i].style.height="100%";
+		}
+	}
+
+	for (var m=0;m<field.length;m++) {
+		field[m].addEventListener("keypress", (event) => {
+			if(event.keyCode === 13){
+				viewer();
+			}
+		})
+	}
+
+
+
+	actionButton.addEventListener("click", viewer);
+
+	web.addEventListener("click", () => {
+		if(rweb === true) {
+			web.style.transform = "translateY(0px)";
+			rweb = false;
+			console.log(rweb);
+		} 	
+		else {
+			web.style.transform = "translateY(-20px)";
+			rweb = true;
+			console.log(rweb);
+		}
+	})
+
+	mobile.addEventListener("click", () => {
+		if(rmobile === true) {
+			mobile.style.transform = "translateY(0px)";
+			rmobile = false;
+			console.log(rmobile);
+		} 	
+		else {
+			mobile.style.transform = "translateY(-20px)";
+			rmobile = true;
+			console.log(rmobile);
+		}	
+	})
+
+	seo.addEventListener("click", () => {
+		if(rseo === true) {
+			seo.style.transform = "translateY(0px)";
+			rseo = false;
+			console.log(rseo);
+		} 	
+		else {
+			seo.style.transform = "translateY(-20px)";
+			rseo = true;
+			console.log(rseo);
+		}		
+	})
+
+	uiux.addEventListener("click", () => {
+		if(ruiux === true) {
+			uiux.style.transform = "translateY(0px)";
+			ruiux = false;
+			console.log(ruiux);
+		} 	
+		else {
+			uiux.style.transform = "translateY(-20px)";
+			ruiux = true;
+			console.log(ruiux);
+		}	
+	})
+
+
+	
+	name.addEventListener("change", ()=> {
+		nameValue=name.value;
+	})
+
+	email.addEventListener("change", ()=> {
+		emailValue=email.value;
+	})
+
+	phone.addEventListener("change", ()=> {
+		phoneValue=phone.value;
+	})
+
+	interested.addEventListener("keypress", (event) => {
+			if(event.keyCode === 13){
+				viewer();
+			}
+		})
+
+
+}
+
+fsform();

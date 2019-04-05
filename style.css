@@ -154,16 +154,18 @@ body{
 
 .container{
 	position: relative;
-	width: 100vw;
+	margin-top: 30px;
+	width: 100%;
 	display: flex;
-	flex-wrap: wrap;
-	margin: 10px;
-	margin-top: 50px;
 	background: linear-gradient(to top, #41295a 0%, #2F0743 100%);
 	border-radius: 10px;
-	margin-bottom: 100px;
-	height: 604px;
+	height: auto;
+	align-items: space-around;
 	color: #fff;
+}
+
+.container img{
+	width: 100%;
 }
 
 .container #webbg {
@@ -201,7 +203,8 @@ body{
 
 .container .card-container {
 	display: flex;
-	flex-wrap: wrap;
+	width: 100%;
+	justify-content: space-around;
 	position: relative;
 	margin: auto;
 
@@ -212,7 +215,7 @@ body{
 	border-radius: 5%;
 	border: 1px solid #fff;
 	padding: 20px;
-	height: 470px;
+	height: auto;
 	width: 190px;
 	margin: 10px;
 	transition: all 0.3s ease-in;
@@ -260,7 +263,7 @@ body{
 	border: 1px solid #fff;
 	padding: 20px;
 	width: 190px;
-	height: 470px;
+	height: auto;
 	margin: 10px;
 	transition: all 0.3s ease-in;
 }
@@ -293,7 +296,7 @@ body{
 	border: 1px solid #fff;
 	padding: 20px;
 	width: 190px;
-	height: 470px;
+	height: auto;
 	margin: 10px;
 	transition: all 0.3s ease-in;
 }
@@ -377,71 +380,128 @@ body{
 }
 
 .ping{
-	background: #fff;
+	color: #fff;
 	display: block;
+	height: 90vh;
 	padding: 25px; 
-	background: linear-gradient(to bottom, #6e529d 0%,#d97b93 100%);
+	background: linear-gradient(to right, #5C1C6D 0%,#00B4A9 100%);
 }
 
-.ping p{
+.ping .title{
 	text-align: center;
+	font-size: 3em;
 }
 
-.ping p:after {
-	display: block;
-	content: '';
-	border-top: 1px solid #fff;
-	width: 100%;
-	transform: scaleX(0.75);
-}
-.ping #introtext {
-	color: #fff;
-	font-size: 2em;
-}
-
-.ping form {
-	display: block;
-	margin: 5px auto;
-	width: 70%;
+.ping #slide {
 	position: relative;
+	top: 20px;
+	right: 20px;
+	display: inline-block;
+	float: right;
+	font-weight: bold;
+	font-size: 1.3em;
 }
 
-.ping form label {
-	color: #fff;
+.ping #error {
+	position: relative;
+	top: 30%;
+	text-align: center;
+	color: orange;
+	font-size: 20px;
+	font-weight: bolder;
+	transition: all 0.5s ease;
+	opacity: 0;
+	transform-origin: top;
+	transform: scaleY(0);
 }
 
-.ping form input {
+.ping input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #fff;
+  transition: all 0.5s ease;
+  transition-delay: 0.5s;
+}
+
+.ping input:focus::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #fff;
+  transform: translateY(-2em);
+  opacity: 0;
+}
+
+.ping label{
+	display: inline-grid;
+}
+
+.ping input {
 	border: none;
 	outline: none;
-	border: 1px solid #ccc;
-	border-radius: 5px;
-	padding: 5px;
-	height: 25px;
-	margin: 10px;
-	margin-top: 2px;
-	transition: all 1s ease-in-out;
+	background-color: transparent;
+	border-bottom: 3px solid #fff;
+	font-size: 1.5em;
+	color: #fff;
+	width: 100%;
+	transition: all 1s ease;
+	padding: 10px 10px;
 }
 
-.ping form #name:hover  .ping form #tname{
-	opacity: 1;
+.ping input:focus+.underline {
+  transform: scale(1);
 }
 
-.ping form .tooltip {
-  visibility: visible;
-  width: 120px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  padding: 5px 10px;
-  border-radius: 6px;
-  position: relative;
-  z-index: 1;
-  margin-left: 10px;
-  height: 15px;
+.underline {
+	z-index: 5;
+	background-color: orange;
+	display: inline-block;
+	height: 3px;
+	margin-top: -3px;
+	position: relative;
+	transform-origin: left;
+	-webkit-transform: scale(0, 1);
+	transform: scale(0, 1);
+	-webkit-transition: all 0.5s linear;
+	transition: all 0.5s linear;
+	width: 110%;
 }
 
-.ping form #tname, .ping form #temail, .ping form #tmobile {
-	opacity: 0;
+.ping .input-content {
+	position: relative;
+	width: 100%;
+	height: 60vh;
+	overflow: hidden;
+}
+
+.ping .input-content .forminput {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	transition: all 0.3s ease;
+}
+
+.ping .continue-button{
+	float: right;
+}
+
+.ping .interested {
+	padding: 10px;
+	border: 2px solid #fff;
+	box-shadow: 0px 16px 21px -9px #000;
+	margin: 5px 20px;
+	transition: all 0.4s ease;
+}
+
+.ping .continue {
+	border: none;
+	outline: none;
+	background-color: transparent;
+	cursor: pointer;
+	font-size: 1.5em;
+	color: #fff;
+	padding: 10px;
+	border: 2px solid #fff;
+	border-radius: 64px;
 }
 
 .footer{
