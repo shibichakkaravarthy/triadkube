@@ -10,10 +10,14 @@ const navigator = () => {
 		 menuShown = true;
 	}
 	else {
-		menu.style.transform = "rotate(180deg) translateX(25px)";
+		menu.style.transform = "rotate(-180deg) translateX(25px)";
 		bg.style.width = "0vw";
 		menuShown = false;
 	}
+}
+
+const pageRedirection = () => {
+	window.location = "https://www.tutorialspoint.com";
 }
 
 const services = () => {
@@ -161,6 +165,11 @@ const fsform = () => {
 	actionButton=document.getElementsByClassName('continue')[0];
 	container=document.getElementsByClassName('forminput');
 	console.log(name,email,phone,interested,actionButton,container,field);
+	//Review output variables;
+
+	let resName = document.getElementById('review-name');
+	let resEmail = document.getElementById('review-email');
+	let resMobile = document.getElementById('review-mobile');
 
 	const hider = () => {
 		for(var n=0; n<container.length; n++) {
@@ -202,6 +211,9 @@ const fsform = () => {
 			container[i].style.height="100%";
 			slidenumber.innerHTML=`${i+1}/5`;
 			console.log('Second');
+			actionButton.addEventListener("click", () => {
+				console.log('Goyya');
+			})
 		}
 	}
 
@@ -272,18 +284,18 @@ const fsform = () => {
 
 	
 	name.addEventListener("change", ()=> {
-		nameValue=name.value;
+		resName.value=name.value;
 	})
 
 	email.addEventListener("change", ()=> {
-		emailValue=email.value;
+		resEmail.value=email.value;
 	})
 
 	phone.addEventListener("change", ()=> {
-		phoneValue=phone.value;
+		resMobile.value=phone.value;
 	})
 
-	interested.addEventListener("keypress", (event) => {
+	actionButton.addEventListener("keypress", (event) => {
 			if(event.keyCode === 13){
 				viewer();
 			}

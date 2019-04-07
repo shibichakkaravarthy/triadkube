@@ -9,13 +9,13 @@
 
 	<img src="img/menu.png" id="btn" onclick="navigator()">
 
-	<div class="menubg"></div>
+	<div class="menubg" onclick="navigator()"></div>
 
 	<div class="menu">
-		<img src="img/menu/home.png">
-		<img src="img/menu/about.png">
-		<img src="img/menu/services.png">
-		<img src="img/menu/estimate.png">
+		<img src="img/menu/home.png" onclick="pageRedirection()">
+		<img src="img/menu/about.png" onclick="pageRedirection()">
+		<img src="img/menu/services.png" onclick="pageRedirection()">
+		<img src="img/menu/estimate.png" onclick="pageRedirection()">
 	</div>
 
 	<div class="header">T R I A D K U B E</div>
@@ -106,7 +106,7 @@
 					<h2>Interested</h2><br><br>
 
 					<label>
-						<input type="number" class="input-field" id="company" placeholder="Company" autocomplete="off">
+						<input type="number" class="input-field" id="company" placeholder="Maximum Budget" autocomplete="off">
 						<span class="underline"></span>
 					</label>
 
@@ -123,9 +123,20 @@
 				<div style="display: inline-grid;">
 					<h2>Review and Submit</h2>
 					<div style="width: 50%">
-						<input type="text" name="name">
-						<input type="email" name="email">
-						<input type="number" name="mobile">
+						<label id="review">
+							<h3>Name</h3>
+							<input type="text" name="name" id="review-name" autocomplete="off">
+						</label>
+						
+						<label id="review">
+							<h3>Email</h3>
+							<input type="email" name="email" id="review-email" autocomplete="off">
+						</label>
+
+						<label id="review">
+							<h3>Mobile</h3>
+							<input type="number" name="mobile" id="review-mobile" autocomplete="off">
+						</label>
 					</div>
 				</div>
 			</div>

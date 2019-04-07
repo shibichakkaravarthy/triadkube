@@ -40,7 +40,7 @@ body{
 	height: auto;
 	width: auto;
 	transition: all 0.5s ease-in;
-	transform: rotate(180deg) translateX(25px);
+	transform: rotate(-180deg) translateX(25px);
 }
 
 .menu > * {
@@ -478,6 +478,18 @@ body{
 	justify-content: center;
 	overflow: hidden;
 	transition: all 0.3s ease;
+}
+
+.forminput h3 {
+	margin: 0;
+}
+
+.forminput #review{
+	margin-bottom: 30px;
+}
+
+.forminput #review input {
+	margin-left: 20px;
 }
 
 .ping .continue-button{
