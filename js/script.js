@@ -159,7 +159,7 @@ const fsform = () => {
 	phone=document.getElementById('mobile');
 	interested=document.getElementById('interested');
 	actionButton=document.getElementsByClassName('continue')[0];
-	container=document.getElementsByClassName('forminput')
+	container=document.getElementsByClassName('forminput');
 	console.log(name,email,phone,interested,actionButton,container,field);
 
 	const hider = () => {
@@ -191,13 +191,17 @@ const fsform = () => {
 				slidenumber.innerHTML=`${i+1}/5`;
 				container[i].style.height="100%";
 				field[i].focus();
+				console.log('First');
 			}
 		}
 
 		else {
+			hider();
 			i=i+1;
-			slidenumber.innerHTML=`${i+1}/5`;
+			console.log(i);
 			container[i].style.height="100%";
+			slidenumber.innerHTML=`${i+1}/5`;
+			console.log('Second');
 		}
 	}
 
