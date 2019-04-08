@@ -21,6 +21,7 @@ const pageRedirection = () => {
 }
 
 const services = () => {
+	
 	let web = document.getElementById('webcard');
 	let whead = document.getElementById('wheading');
 	let wcon = document.getElementById('wcontent');
@@ -132,15 +133,15 @@ const bannerText = () => {
 				];
 
 	var i=0;
+	text.innerHTML = textArray[i];
 
 	setInterval(()=> {
 		var a=document.createTextNode(textArray[i])
-		text.innerHTML = textArray[i];
 		i = i+1;
 		if(i === textArray.length){
 			i=0;
 		}
-		
+		text.innerHTML = textArray[i];		
 	}, 4000)
 }
 
@@ -217,8 +218,8 @@ const fsform = () => {
 		}
 	}
 
-	for (var m=0;m<field.length;m++) {
-		field[m].addEventListener("keypress", (event) => {
+	for (var m=0;m<container.length;m++) {
+		container[m].addEventListener("keypress", (event) => {
 			if(event.keyCode === 13){
 				viewer();
 			}
@@ -294,14 +295,6 @@ const fsform = () => {
 	phone.addEventListener("change", ()=> {
 		resMobile.value=phone.value;
 	})
-
-	actionButton.addEventListener("keypress", (event) => {
-			if(event.keyCode === 13){
-				viewer();
-			}
-		})
-
-
 }
 
 fsform();

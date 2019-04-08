@@ -40,7 +40,7 @@ body{
 	height: auto;
 	width: auto;
 	transition: all 0.5s ease-in;
-	transform: rotate(-180deg) translateX(25px);
+	transform: rotate(-180deg) translateX(50px) translateY(50px);
 }
 
 .menu > * {
@@ -50,23 +50,23 @@ body{
 }
 
 .menu > *:nth-of-type(1) {
-  -webkit-transform: rotate(0deg) translate(2em) rotate(0deg) translateX(0em);
-          transform: rotate(0deg) translate(2em) rotate(0deg) translateX(0em);
+  -webkit-transform: rotate(0deg) translate(2em) rotate(0deg) translateX(2em);
+          transform: rotate(0deg) translate(2em) rotate(0deg) translateX(2em);
 }
 
 .menu > *:nth-of-type(2) {
-  -webkit-transform: rotate(20deg) translate(6em) rotate(-20deg) translateX(2em);
-          transform: rotate(20deg) translate(6em) rotate(-20deg) translateX(2em);
+  -webkit-transform: rotate(20deg) translate(6em) rotate(-20deg) translateX(6em);
+          transform: rotate(20deg) translate(6em) rotate(-20deg) translateX(6em);
 }
 
 .menu > *:nth-of-type(3) {
-  -webkit-transform: rotate(40deg) translate(10em) rotate(-40deg) translateX(6em);
-          transform: rotate(40deg) translate(10em) rotate(-40deg) translateX(6em);
+  -webkit-transform: rotate(40deg) translate(10em) rotate(-40deg) translateX(10em);
+          transform: rotate(40deg) translate(10em) rotate(-40deg) translateX(10em);
 }
 
 .menu > *:nth-of-type(4) {
-  -webkit-transform: rotate(60deg) translate(14em) rotate(-60deg) translateX(10em);
-          transform: rotate(60deg) translate(14em) rotate(-60deg) translateX(10em);
+  -webkit-transform: rotate(60deg) translate(14em) rotate(-60deg) translateX(14em);
+          transform: rotate(60deg) translate(14em) rotate(-60deg) translateX(14em);
 }
 
 .menu > *:nth-of-type(5) {
@@ -83,6 +83,13 @@ body{
 	height: 40px;
 }
 
+.menu #menuit{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	color: #fff;
+	transition: all 0.3s ease;
+}
 .menubg {
 	position: fixed;
 	z-index: 8;
@@ -129,6 +136,10 @@ body{
 		transform: scaleX(1);
 	}
 
+	95%{
+		transform: scaleX(0);
+	}
+
 	100%{
 		transform: scaleX(0);
 	}
@@ -149,7 +160,7 @@ body{
 	animation-name: bannertext;
 	animation-duration: 4s;
 	animation-iteration-count: infinite;
-	animation-delay: 4s;
+	/*animation-delay: 4s;*/
 }
 
 .container{
@@ -159,13 +170,17 @@ body{
 	display: flex;
 	background: linear-gradient(to top, #41295a 0%, #2F0743 100%);
 	border-radius: 10px;
-	height: auto;
 	align-items: space-around;
 	color: #fff;
 }
 
 .container img{
 	width: 100%;
+	height: 100%;
+}
+
+.container .card:hover {
+	background-color: rgba(0,0,0,0.5);
 }
 
 .container #webbg {
@@ -175,6 +190,7 @@ body{
 	left: 0;
 	opacity: 0;
 	transition: 1s opacity ease-in-out, 0.16s transform linear;
+	height: 100%;
 }
 
 .container #seobg {
@@ -184,6 +200,7 @@ body{
 	left: 0;
 	opacity: 0;
 	transition: 1s opacity ease-in-out, 0.16s transform linear;
+	height: 100%;
 }
 
 .container #mobbg {
@@ -193,6 +210,7 @@ body{
 	left: 0;
 	opacity: 0;
 	transition: 1s opacity ease-in-out, 0.16s transform linear;
+	height: 100%;
 }
 
 #dataimge{
