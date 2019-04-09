@@ -16,6 +16,11 @@ const navigator = () => {
 	}
 }
 
+
+const about= ()=>{
+	 document.getElementById("demo").innerHTML = "about.html";
+}
+
 const services = () => {
 	let web = document.getElementById('webcard');
 	let whead = document.getElementById('wheading');

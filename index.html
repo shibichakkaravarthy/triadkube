@@ -3,6 +3,7 @@
 <head>
 	<title>Creative Web and Mobile App Developers :-: TraidKube</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
 </head>
 <body>	
 
@@ -12,8 +13,8 @@
 
 	<div class="menu">
 		<img src="img/menu/home.png">
-		<img src="img/menu/about.png">
-		<img src="img/menu/services.png">
+		<img onclick="about('about.html')"  src="img/menu/about.png">
+    	<img src="img/menu/services.png">
 		<img src="img/menu/estimate.png">
 	</div>
 
@@ -76,23 +77,26 @@
 
 	<div class="ping">
 		<p id='introtext'>Have a Project in Mind... Don't hesitate to Tell us!</p>
-		<form method="POST">
-			<label>
-				Name <br>
-				<input type="text" name="name" id="name" placeholder="Name">
-			</label><br>
-			
-			<label>
-				Email <br>
-				<input type="email" name="email" placeholder="E-mail"><br>
-			</label>
-			
-			<label>
-				Phone <br>
-				<input type="tel" name="mobile" id="mobile" placeholder="Mobile"><br>
-			</label>
-			
-		</form>
+	<form>
+  <h1>Fancy Text Inputs</h1>
+  <div class="question">
+    <input type="text" required/>
+    <label>First Name</label>
+  </div>
+  <div class="question">
+    <input type="text" required/>
+    <label>Last Name</label>
+  </div>
+  <div class="question">
+    <input type="text" required/>
+    <label>Email Address</label>
+  </div>
+  <div class="question">
+    <input type="text" required/>
+    <label>Email Confirm</label>
+  </div>
+  <button>Submit</button>
+</form>
 	</div>
 
 	<div class="footer">
