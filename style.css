@@ -24,9 +24,8 @@ body{
 	}
 
 	div.banner div.text {
-		margin: auto auto;
 		font-size: 3em;
-		width: 80%;
+		width: 70%;
 	}
 
 	div.mobilemenu {
@@ -204,7 +203,7 @@ body{
 
 .banner .text {
 	display: inline-block;
-	width: 420px;
+	width: 30%;
 	position: absolute;
 	padding: 10px;
 	border-left: 1px solid #fff;
@@ -218,6 +217,31 @@ body{
 	animation-duration: 4s;
 	animation-iteration-count: infinite;
 	/*animation-delay: 4s;*/
+}
+
+.cost {
+	padding: 10px;
+	display: flex;
+	justify-content: space-around;
+	margin: 25px 10px;
+	border: 1px solid #ddd;
+	text-align: center;
+	box-shadow: 0px 15px 15px 0px #BABABA;
+}
+
+.cost .sub{
+	padding: 0.5em 10em;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+}
+
+.cost .sub .heading {
+	font-size: 1.5em;
+}
+
+.cost .sub .counter {
+	font-size: 2.5em;
+	font-weight: bolder;
 }
 
 .container{

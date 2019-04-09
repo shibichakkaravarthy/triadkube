@@ -127,9 +127,9 @@ services();
 const bannerText = () => {
 	text = document.getElementsByClassName('text')[0];
 
-	textArray = ["Welcome to TriadKube where Expectation meets Reality", 
-				 "Enroll your Business into the Internet for a Comparatively Low Cost!!!",
-				 "Projects with international Standard for Indian Budget"
+	textArray = ["Welcome to TriadKube <br>where Expectation meets Reality",
+				 "Everyone can afford an Website <br>with TriadKube",
+				 "Projects with International Standard <br>for Indian Budget"
 				];
 
 	var i=0;
@@ -298,3 +298,15 @@ const fsform = () => {
 }
 
 fsform();
+
+const counter = () => {
+	let web = document.getElementById('webcounter');
+	let app = document.getElementById('appcounter');
+	let container = document.getElementsByClassName('cost')[0];
+
+	let elementHieght = container.clientHeight;
+
+	console.log(elementHieght);
+}
+
+counter();
