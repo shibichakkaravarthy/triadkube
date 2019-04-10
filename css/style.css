@@ -212,11 +212,15 @@ body{
 	z-index: 2;
 	top: 40%;
 	right: 100px;
+<<<<<<< HEAD:style.css
+	font-family: 'Cinzel', serif;
+=======
 	transform-origin: right;
 	animation-name: bannertext;
 	animation-duration: 4s;
 	animation-iteration-count: infinite;
 	/*animation-delay: 4s;*/
+>>>>>>> cb24877e299c99f6ac7f2c7a90556320c6470c0a:css/style.css
 }
 
 .cost {
@@ -478,6 +482,9 @@ body{
 	width: 100px;
 }
 
+<<<<<<< HEAD:style.css
+.ping p{
+=======
 .ping{
 	color: #fff;
 	display: block;
@@ -487,10 +494,20 @@ body{
 }
 
 .ping .title{
+>>>>>>> cb24877e299c99f6ac7f2c7a90556320c6470c0a:css/style.css
 	text-align: center;
 	font-size: 3em;
 }
 
+<<<<<<< HEAD:style.css
+.ping p:after {
+	display: block;
+	content: '';
+	border-top: 1px solid #fff;
+	width: 100%;
+	transform: scaleX(0.75);
+}
+=======
 .ping #slide {
 	position: relative;
 	top: 20px;
@@ -615,6 +632,7 @@ body{
 	border-radius: 64px;
 }
 
+>>>>>>> cb24877e299c99f6ac7f2c7a90556320c6470c0a:css/style.css
 .footer{
 	width: 100%;
 	background-color: #222;
