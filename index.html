@@ -13,10 +13,10 @@
 <body>
 
 	<div class="mobilemenu">
-		<div id="menuitm"><img src="img/menu/home.png" onclick="pageRedirection()"></div>
-		<div id="menuitm"><img src="img/menu/about.png" onclick="pageRedirection()"></div>
-		<div id="menuitm"><img src="img/menu/services.png" onclick="pageRedirection()"></div>
-		<div id="menuitm"><img src="img/menu/estimate.png" onclick="pageRedirection()"></div>
+		<div id="menuitm"><img src="img/menu/home.png" onclick="pageRedirection('home')"></div>
+		<div id="menuitm"><img src="img/menu/about.png" onclick="() => { pageRedirection('about')}"></div>
+		<div id="menuitm"><img src="img/menu/services.png" onclick="pageRedirection('services.html')"></div>
+		<div id="menuitm"><img src="img/menu/estimate.png" onclick="pageRedirection('ohoo.html')"></div>
 	</div>	
 
 	<img src="img/menu.png" id="btn" onclick="navigator()">
@@ -24,11 +24,6 @@
 	<div class="menubg" onclick="navigator()"></div>
 
 	<div class="menu">
-
-		<img src="img/menu/home.png">
-		<img onclick="about('about.html')"  src="img/menu/about.png">
-    	<img src="img/menu/services.png">
-		<img src="img/menu/estimate.png">
 		<div id="menuitm"><img src="img/menu/home.png" onclick="pageRedirection()"><div style="color: #fff; margin: auto;">HOME</div></div>
 		<div id="menuitm"><img src="img/menu/about.png" onclick="pageRedirection()"><div style="color: #fff; margin: auto;">ABOUT</div></div>
 		<div id="menuitm"><img src="img/menu/services.png" onclick="pageRedirection()"><div style="color: #fff; margin: auto;">SERVICES</div></div>
@@ -105,29 +100,6 @@
 	</div>
 
 	<div class="ping">
-
-		<p id='introtext'>Have a Project in Mind... Don't hesitate to Tell us!</p>
-	<form>
-  <h1>Fancy Text Inputs</h1>
-  <div class="question">
-    <input type="text" required/>
-    <label>First Name</label>
-  </div>
-  <div class="question">
-    <input type="text" required/>
-    <label>Last Name</label>
-  </div>
-  <div class="question">
-    <input type="text" required/>
-    <label>Email Address</label>
-  </div>
-  <div class="question">
-    <input type="text" required/>
-    <label>Email Confirm</label>
-  </div>
-  <button>Submit</button>
-</form>
-=======
 		<div class="title">Get a Free Consulting!</div>
 		<div id="slide"></div>
 		<p id='error'>Please fill this field correctly to Continue. We will not Misuse or Spam you with these details</p>

@@ -16,14 +16,9 @@ const navigator = () => {
 	}
 }
 
-
-
-const about= ()=>{
-	 document.getElementById("demo").innerHTML = "about.html";
-}
-
-const pageRedirection = () => {
-	window.location = "https://www.tutorialspoint.com";
+const pageRedirection = (name) => {
+	console.log(name);
+	// window.location = `about.html`;
 
 }
 
@@ -338,6 +333,10 @@ const counter = () => {
 	if(scrollposition > 200 && scrollposition < 400) {
 		console.log('i');
 		inserter();
+	}
+
+	else {
+		web.innerHTML = "₹ 0";
 	}
 }
 
