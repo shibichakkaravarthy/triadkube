@@ -221,7 +221,7 @@ body{
 
 .cost {
 	padding: 10px;
-	display: flex;
+	/*display: flex;*/
 	justify-content: space-around;
 	margin: 25px 10px;
 	border: 1px solid #ddd;

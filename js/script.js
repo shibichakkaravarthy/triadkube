@@ -300,13 +300,38 @@ const fsform = () => {
 fsform();
 
 const counter = () => {
+
 	let web = document.getElementById('webcounter');
 	let app = document.getElementById('appcounter');
 	let container = document.getElementsByClassName('cost')[0];
 
-	let elementHieght = container.clientHeight;
+	let elementHeight = container.clientHeight;
 
-	console.log(elementHieght);
+	let scrollposition = window.scrollY || window.pageYOffset;
+	let windowHeight = window.innerHeight;
+	let elementposition = container.getBoundingClientRect().bottom + scrollY + elementHeight;
+
+	const inserter = () => {
+		let wcounter = 0, acounter = 1000;
+		console.log(wcounter);
+			web.innerHTML = "₹ 0"
+
+			setInterval(() => {
+				web.innerHTML = `₹ ${wcounter}`
+				wcounter = wcounter+50;
+
+				if (wcounter > 6999) {
+					web.innerHTML = "₹ 6999"
+				}
+			}, 10);
+	}
+
+	
+
+	if(scrollposition > 200 && scrollposition < 400) {
+		console.log('i');
+		inserter();
+	}
 }
 
-counter();
+document.addEventListener("scroll",counter);
