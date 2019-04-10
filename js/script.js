@@ -1,4 +1,4 @@
-let menuShown = false
+let menuShown = false;
 
 const navigator = () => {
 	let menu = document.querySelector('.menu');
@@ -20,6 +20,7 @@ const navigator = () => {
 
 const about= ()=>{
 	 document.getElementById("demo").innerHTML = "about.html";
+}
 
 const pageRedirection = () => {
 	window.location = "https://www.tutorialspoint.com";
