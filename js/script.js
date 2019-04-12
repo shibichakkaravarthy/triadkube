@@ -29,3 +29,8 @@ document.getElementsByName('home')[0].onclick = () => {pageRedirection('index.ht
 document.getElementsByName('about')[0].onclick = () => {pageRedirection('about.html')}
 document.getElementsByName('services')[0].onclick = () => {pageRedirection('services.html')}
 document.getElementsByName('estimate')[0].onclick = () => {pageRedirection('estimate.html')}
+
+document.getElementsByName('home')[1].onclick = () => {pageRedirection('index.html')}
+document.getElementsByName('about')[1].onclick = () => {pageRedirection('about.html')}
+document.getElementsByName('services')[1].onclick = () => {pageRedirection('services.html')}
+document.getElementsByName('estimate')[1].onclick = () => {pageRedirection('estimate.html')}

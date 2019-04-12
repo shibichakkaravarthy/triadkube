@@ -30,7 +30,7 @@ body{
 
 	div.mobilemenu {
 		position: fixed;
-		z-index: 10;
+		z-index: 20;
 		background-color: rgba(0,0,0,0.7);
 		bottom: 0;
 		left: 0;
@@ -530,6 +530,10 @@ body{
 	transform: scaleY(0);
 }
 
+.ping #error:after {
+	display: none;
+}
+
 .ping input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: #fff;
   transition: all 0.5s ease;
@@ -632,22 +636,46 @@ body{
 }
 
 .footer{
+	display: flex;
+	justify-content: space-around;
 	width: 100%;
-	background-color: #fff;
+	background-color: #333;
 	height: fit-content;
 	padding: 150px 0px;
 	margin-top: 5px;
 }
 
 .footer .left p{
-	margin: 0px auto;
-	width: 30%;
+	padding: 10px 20px;
+	width: 50%;
 	font-size: 20px;
 	color: #fff;
 	border-right: 1px solid #fff;
 }
 
 /*About Page*/
+
+@media only screen and (max-width: 1024px) {
+	div.banner{
+		height: 70vh;
+	}
+
+	div.banner .about-text p{
+		font-size: 4em;
+	}
+
+	div.about-card .text div{
+		width: 90%;
+	}
+
+	div.about-card .text div #heading {
+		font-size: 1.5em;
+	}
+
+	.about-card .text div #content {
+		font-size: 0.7em;
+	}
+}
 
 .banner #particles{
 	z-index: 15;
@@ -669,6 +697,7 @@ body{
 .banner .about-text p {
 	font-size: 2em;
 	padding: 5px 20px;
+	z-index: 20;
 	border-left: 1px solid #fff;
 	border-right: 1px solid #fff;
 }

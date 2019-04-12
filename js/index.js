@@ -244,15 +244,35 @@ const fsform = () => {
 	})
 
 	email.addEventListener("change", ()=> {
-		resEmail.value=email.value;
+		let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+		if (email.value.match(mailformat)) {
+			resEmail.value=email.value;
+		}
+		else{
+			i=i-1;
+			container[i].style.height="100%";
+			error.style.transform = "scaleY(1)";
+			error.style.opacity = "1";
+		}
 	})
 
 	phone.addEventListener("change", ()=> {
-		resMobile.value=phone.value;
+		if(phone.value.length < 10 || phone.value.length > 10 ) {
+			i=i-1;
+			container[i].style.height="100%";
+			error.style.transform = "scaleY(1)";
+			error.style.opacity = "1";
+		}
+		else{
+			console.log('check');
+			resMobile.value = phone.value;
+		}
 	})
 }
 
 fsform();
+
+let counterRan = false
 
 const counter = () => {
 
@@ -267,29 +287,29 @@ const counter = () => {
 	let elementposition = container.getBoundingClientRect().bottom + scrollY + elementHeight;
 
 	const inserter = () => {
-		let wcounter = 0, acounter = 1000;
-		console.log(wcounter);
+		let wcounter = 0, acounter = 0;
 			web.innerHTML = "₹ 0"
 
 			setInterval(() => {
 				web.innerHTML = `₹ ${wcounter}`
 				wcounter = wcounter+50;
+				app.innerHTML = `₹ ${acounter}`;
+				acounter = acounter+100;
 
-				if (wcounter > 6999) {
-					web.innerHTML = "₹ 6999"
+				if (wcounter > 6999 || acounter > 14000) {
+					web.innerHTML = "₹ 6999";
+					app.innerHTML = "₹ 13999";
 				}
 			}, 10);
 	}
 
 	
 
-	if(scrollposition > 200 && scrollposition < 400) {
-		console.log('i');
-		inserter();
-	}
-
-	else {
-		web.innerHTML = "₹ 0";
+	if(scrollposition > 200) {
+		if(counterRan === false) {
+			inserter();
+			counterRan = true;
+		}
 	}
 }
 
