@@ -79,7 +79,7 @@ body{
 	position: fixed;
 	bottom: 70px;
 	left: 50px;
-	z-index: 10;
+	z-index: 90;
 	animation-name: menubutton;
 	animation-duration: 4s;
 	animation-iteration-count: infinite;
@@ -89,7 +89,7 @@ body{
 
 .menu{
 	position: absolute;
-	z-index: 9;
+	z-index: 99;
 	position: fixed;
 	left: 0px;
 	bottom: 200px;
@@ -101,7 +101,7 @@ body{
 
 .menu > * {
   display: block;
-  z-index: 9;
+  z-index: 90;
   cursor: pointer;
 }
 
@@ -148,7 +148,7 @@ body{
 }
 .menubg {
 	position: fixed;
-	z-index: 8;
+	z-index: 80;
 	background: rgba(0,0,0,0.7);
 	height: 100vh;
 	width: 0vw;
@@ -212,15 +212,14 @@ body{
 	z-index: 2;
 	top: 40%;
 	right: 100px;
-<<<<<<< HEAD:style.css
 	font-family: 'Cinzel', serif;
-=======
+
 	transform-origin: right;
 	animation-name: bannertext;
 	animation-duration: 4s;
 	animation-iteration-count: infinite;
 	/*animation-delay: 4s;*/
->>>>>>> cb24877e299c99f6ac7f2c7a90556320c6470c0a:css/style.css
+
 }
 
 .cost {
@@ -482,9 +481,9 @@ body{
 	width: 100px;
 }
 
-<<<<<<< HEAD:style.css
 .ping p{
-=======
+}
+
 .ping{
 	color: #fff;
 	display: block;
@@ -494,12 +493,12 @@ body{
 }
 
 .ping .title{
->>>>>>> cb24877e299c99f6ac7f2c7a90556320c6470c0a:css/style.css
+
 	text-align: center;
 	font-size: 3em;
 }
 
-<<<<<<< HEAD:style.css
+
 .ping p:after {
 	display: block;
 	content: '';
@@ -507,7 +506,7 @@ body{
 	width: 100%;
 	transform: scaleX(0.75);
 }
-=======
+
 .ping #slide {
 	position: relative;
 	top: 20px;
@@ -632,10 +631,9 @@ body{
 	border-radius: 64px;
 }
 
->>>>>>> cb24877e299c99f6ac7f2c7a90556320c6470c0a:css/style.css
 .footer{
 	width: 100%;
-	background-color: #222;
+	background-color: #fff;
 	height: fit-content;
 	padding: 150px 0px;
 	margin-top: 5px;
@@ -648,3 +646,87 @@ body{
 	color: #fff;
 	border-right: 1px solid #fff;
 }
+
+/*About Page*/
+
+.banner #particles{
+	z-index: 15;
+}
+
+.banner .about-text {
+	color: #fff;
+	position: absolute; 
+	top: 0px; 
+	left: 0px; 
+	z-index: 10; 
+	display: flex; 
+	align-items: center; 
+	justify-content: center;
+	width: 100%; 
+	height: 100%;
+}
+
+.banner .about-text p {
+	font-size: 2em;
+	padding: 5px 20px;
+	border-left: 1px solid #fff;
+	border-right: 1px solid #fff;
+}
+
+.about-card {
+	margin: 50px 200px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0px 15px 15px 0px #BABABA;
+	transform-style: preserve-3d;
+}
+
+.about-card .image {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.about-card .image img {
+	position: relative;
+	width: 100%;
+	height: auto;
+}
+
+.about-card .text {
+	position: absolute;
+	display: flex;
+	z-index: 7;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	justify-content: center;
+	align-items: center;
+	transform: translateZ(150px);
+	z-index: 10;
+	transition: all 0.3s ease;
+	box-shadow: 0px 15px 15px 0px #BABABA;
+}
+
+.about-card .text div{
+	padding: 10px;
+	background-color: rgba(255,255,255,0.5);
+	position: absolute;
+	width: 50%;
+	text-align: center;
+}
+
+.about-card .text div #heading {
+	font-size: 3em;
+	padding: 1% 10%;
+	display: inline-block;
+	border-right: 1px solid #000;
+	border-left: 1px solid #000;
+}
+
+.about-card .text div #content {
+	font-size: 1.1em;
+}
+

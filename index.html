@@ -2,12 +2,10 @@
 <html>
 <head>
 	<title>Creative Web and Mobile App Developers :-: TraidKube</title>
-
-	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/mobile.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"> -->
 
 </head>
 <body>
@@ -21,13 +19,13 @@
 
 	<img src="img/menu.png" id="btn" onclick="navigator()">
 
-	<div class="menubg" onclick="navigator()"></div>
+	<div class="menubg"></div>
 
 	<div class="menu">
-		<div id="menuitm"><img src="img/menu/home.png" onclick="pageRedirection()"><div style="color: #fff; margin: auto;">HOME</div></div>
-		<div id="menuitm"><img src="img/menu/about.png" onclick="pageRedirection()"><div style="color: #fff; margin: auto;">ABOUT</div></div>
-		<div id="menuitm"><img src="img/menu/services.png" onclick="pageRedirection()"><div style="color: #fff; margin: auto;">SERVICES</div></div>
-		<div id="menuitm"><img src="img/menu/estimate.png" onclick="pageRedirection()"><div style="color: #fff; margin: auto;">ESTIMATE</div></div>
+		<div id="menuitm" name="home"><img src="img/menu/home.png"><div style="color: #fff; margin: auto;">HOME</div></div>
+		<div id="menuitm" name="about"><img src="img/menu/about.png"><div style="color: #fff; margin: auto;">ABOUT</div></div>
+		<div id="menuitm" name="services"><img src="img/menu/services.png"><div style="color: #fff; margin: auto;">SERVICES</div></div>
+		<div id="menuitm" name="estimate"><img src="img/menu/estimate.png"><div style="color: #fff; margin: auto;">ESTIMATE</div></div>
 
 	</div>
 
@@ -181,5 +179,6 @@
 	<script type="text/javascript" src="node_modules/granim/dist/granim.min.js"></script>
 	<script type="text/javascript" src="js/gradient.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="js/index.js" ></script>
 </body>
 </html>
