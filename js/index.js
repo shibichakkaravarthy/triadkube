@@ -117,7 +117,7 @@ const fsform = () => {
 	name=document.getElementById('name');
 	email=document.getElementById('email');
 	phone=document.getElementById('mobile');
-	interested=document.getElementById('interested');
+	budget=document.getElementById('budget');
 	actionButton=document.getElementsByClassName('continue')[0];
 	container=document.getElementsByClassName('forminput');
 	console.log(name,email,phone,interested,actionButton,container,field);
@@ -126,6 +126,12 @@ const fsform = () => {
 	let resName = document.getElementById('review-name');
 	let resEmail = document.getElementById('review-email');
 	let resMobile = document.getElementById('review-mobile');
+	let resBudget = document.getElementById('review-budget');
+
+	let webTick = document.getElementById('int-web');
+	let appTick = document.getElementById('int-app');
+	let seoTick = document.getElementById('int-seo');
+	let uiuxTick = document.getElementById('int-uiux');
 
 	const hider = () => {
 		for(var n=0; n<container.length; n++) {
@@ -167,6 +173,22 @@ const fsform = () => {
 			container[i].style.height="100%";
 			slidenumber.innerHTML=`${i+1}/5`;
 			console.log('Second');
+			if(rweb === true){
+					webTick.style.opacity = "1";
+					console.log('tick check')
+				}
+
+				if(rmobile === true){
+					appTick.style.opacity = "1";
+				}
+
+				if(rseo === true){
+					seoTick.style.opacity = "1";
+				}
+
+				if(ruiux === true){
+					uiuxTick.style.opacity = "1";
+				}
 			actionButton.addEventListener("click", () => {
 				console.log('Goyya');
 			})
@@ -268,6 +290,22 @@ const fsform = () => {
 			resMobile.value = phone.value;
 		}
 	})
+
+	budget.addEventListener("change", ()=> {
+		if(budget.value < 5000) {
+			i=i-1;
+			container[i].style.height="100%";
+			error.style.transform = "scaleY(1)";
+			error.style.opacity = "1";
+		}
+		else{
+			console.log('check');
+			resBudget.value = budget.value;
+			error.style.transform = "scaleY(0)";
+			error.style.opacity = "0";
+		}
+	})
+
 }
 
 fsform();

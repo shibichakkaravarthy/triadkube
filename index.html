@@ -131,7 +131,7 @@
 					<h2>Interested</h2><br><br>
 
 					<label>
-						<input type="number" class="input-field" id="company" placeholder="Maximum Budget" autocomplete="off">
+						<input type="number" class="input-field" id="budget" placeholder="Maximum Budget" autocomplete="off">
 						<span class="underline"></span>
 					</label>
 
@@ -145,9 +145,11 @@
 			</div>
 
 			<div class="forminput">
-				<div style="display: inline-grid;">
-					<h2>Review and Submit</h2>
-					<div style="width: 50%">
+				<div style="display: flex; justify-content: space-around;">
+					
+					<h2 style="display: flex; align-items: center;">Review and Submit</h2>
+					
+					<div style="width: 42%; display: inline-grid;">
 						<label id="review">
 							<h3>Name</h3>
 							<input type="text" name="name" id="review-name" autocomplete="off">
@@ -164,8 +166,28 @@
 						</label>
 					</div>
 
-					<div style="width: 50%;">
-						<input type="number" name="budget" id="review-budet" autocomplete="off">
+					<div style="width: 42%; margin-left: 60px;">
+						<label id="review">
+							<h3>Budget</h3>
+							<input type="number" name="budget" id="review-budget" autocomplete="off">
+						</label>
+
+						<div class="review-interested">
+							<p id="int-web"class="tick">&#10004;</p><p>Web</p>
+						</div>
+
+						<div class="review-interested">
+							<p class="tick" id="int-app">&#10004;</p><p>Molile</p>
+						</div>
+
+						<div class="review-interested">
+							<p class="tick" id="int-seo">&#10004;</p><p>SEO</p>
+						</div>
+
+						<div class="review-interested">
+							<p class="tick" id="int-uiux">&#10004;</p><p>UI-UX</p>
+						</div>
+
 					</div>
 				</div>
 			</div>

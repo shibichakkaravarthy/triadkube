@@ -125,4 +125,10 @@
 	img#gift {
 		display: none;
 	}
+
+	/*Services Page*/
+
+	div.service-wrapper .service-card {
+		width: 70%;
+	}
 }
